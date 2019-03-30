@@ -1,0 +1,5 @@
+<ul *ngFor="let newsPost of newsPosts">
+  <li>{{ newsPost.title }}</li>
+  <li>{{ newsPost.date | date }}</li>
+  <li [innerHTML]="newsPost.content"></li>
+</ul>

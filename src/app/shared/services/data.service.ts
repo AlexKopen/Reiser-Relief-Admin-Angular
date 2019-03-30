@@ -3,7 +3,7 @@ import {
   AngularFirestore,
   AngularFirestoreCollection
 } from '@angular/fire/firestore';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { NewsPost } from '../models/news-post.model';
 import { map } from 'rxjs/operators';
 
