@@ -13,9 +13,22 @@
       <div class="col-md-7">
         <div class="login-box-container h-100 align-items-center">
           <div class="mx-auto">
-            <input class="mx-auto" placeholder="Email" type="text" />
-            <input class="mx-auto" placeholder="Password" type="text" />
-            <button class="mx-auto">Login</button>
+            <form [formGroup]="loginForm" (ngSubmit)="loginFormSubmit()">
+              <input
+                formControlName="email"
+                class="mx-auto"
+                placeholder="Email"
+                type="text"
+              />
+              <input
+                formControlName="password"
+                class="mx-auto"
+                placeholder="Password"
+                type="text"
+              />
+              <button class="mx-auto">Login</button>
+            </form>
+            <p>{{ formErrorMessage }}</p>
           </div>
         </div>
       </div>
