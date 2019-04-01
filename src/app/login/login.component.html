@@ -1,37 +1,39 @@
-<div id="login-wrapper" class="h-100 align-items-center">
-  <div id="login-box" class="mx-auto">
-    <div class="row no-gutters h-100">
-      <div class="col-md">
-        <div
-          class="login-box-container first-login-box h-100 align-items-center"
-        >
-          <div id="logo-container" class="mx-auto">
-            <img src="../../assets/logo.png" alt="Reiser Relief" />
+<ng-container *ngIf="showComponent">
+  <div id="login-wrapper" class="h-100 align-items-center">
+    <div id="login-box" class="mx-auto">
+      <div class="row no-gutters h-100">
+        <div class="col-md">
+          <div
+            class="login-box-container first-login-box h-100 align-items-center"
+          >
+            <div id="logo-container" class="mx-auto">
+              <img src="../../assets/logo.png" alt="Reiser Relief" />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-7">
-        <div class="login-box-container h-100 align-items-center">
-          <div class="mx-auto">
-            <form [formGroup]="loginForm" (ngSubmit)="loginFormSubmit()">
-              <input
-                formControlName="email"
-                class="mx-auto"
-                placeholder="Email"
-                type="text"
-              />
-              <input
-                formControlName="password"
-                class="mx-auto"
-                placeholder="Password"
-                type="text"
-              />
-              <button class="mx-auto">Login</button>
-            </form>
-            <p id="form-error">{{ formErrorMessage }}</p>
+        <div class="col-md-7">
+          <div class="login-box-container h-100 align-items-center">
+            <div class="mx-auto">
+              <form [formGroup]="loginForm" (ngSubmit)="loginFormSubmit()">
+                <input
+                  formControlName="email"
+                  class="mx-auto"
+                  placeholder="Email"
+                  type="text"
+                />
+                <input
+                  formControlName="password"
+                  class="mx-auto"
+                  placeholder="Password"
+                  type="password"
+                />
+                <button class="mx-auto">Login</button>
+              </form>
+              <p id="form-error">{{ formErrorMessage }}</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</ng-container>
