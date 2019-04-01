@@ -20,8 +20,7 @@ export class LoginComponent implements OnInit {
 
   loginFormSubmit(): void {
     this.formSubmitted = true;
-    console.table(this.loginForm.value);
-    console.log(this.loginForm.valid);
+    // TODO: Log the use in
   }
 
   get formErrorMessage(): string {

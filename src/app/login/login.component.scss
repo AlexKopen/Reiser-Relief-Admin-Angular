@@ -3,66 +3,71 @@
 #login-wrapper {
   display: flex;
   background: $dark-theme-color;
-}
 
-#login-box{
-  width: 800px;
-  height: 300px;
+  #login-box{
+    width: 800px;
+    height: 300px;
 
-  #logo-container {
-    padding: 0;
-
-    @media only screen and (min-width: 768px) {
-      padding: 0 10px;
-    }
-  }
-
-  .login-box-container {
-    display: flex;
-
-    &.first-login-box:after {
-      display: none;
+    #logo-container {
+      padding: 0;
 
       @media only screen and (min-width: 768px) {
-        content: "";
-        display: block;
-        margin-right: 0;
-        height: 80%;
-        border-right: 1px solid $separator-color;
+        padding: 0 10px;
       }
     }
-  }
 
-  input, button {
-    $login-element-height: 45px;
+    .login-box-container {
+      display: flex;
 
-    display: block;
-    width: 350px;
-    height: $login-element-height;
-    line-height: $login-element-height;
-    margin-bottom: 25px !important;
-    border-radius: 5px;
+      &.first-login-box:after {
+        display: none;
 
-    &:focus {
-      outline-width: 0;
+        @media only screen and (min-width: 768px) {
+          content: "";
+          display: block;
+          margin-right: 0;
+          height: 80%;
+          border-right: 1px solid $separator-color;
+        }
+      }
     }
-  }
 
-  input {
-    background: none;
-    border: 1px solid $separator-color;
-    color: white;
-    padding-left: 5px !important;
+    input, button {
+      $login-element-height: 45px;
 
-    &:focus {
-      border: 1px solid $light-theme-color;
+      display: block;
+      width: 350px;
+      height: $login-element-height;
+      line-height: $login-element-height;
+      margin-bottom: 25px !important;
+      border-radius: 5px;
+
+      &:focus {
+        outline-width: 0;
+      }
+    }
+
+    input {
+      background: none;
+      border: 1px solid $separator-color;
       color: white;
-    }
-  }
+      padding-left: 5px !important;
 
-  button {
-    background: $light-theme-color;
-    color: white;
-    border: 0;
+      &:focus {
+        border: 1px solid $light-theme-color;
+        color: white;
+      }
+    }
+
+    button {
+      background: $light-theme-color;
+      color: white;
+      border: 0;
+    }
+
+    #form-error {
+      height: 24px;
+      color: $error-color;
+    }
   }
 }
