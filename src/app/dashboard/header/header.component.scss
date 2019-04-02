@@ -1,0 +1,24 @@
+@import '../../shared/globals';
+
+:host {
+  display: block;
+  height: $header-height;
+  background: $white;
+  padding: 0 25px;
+}
+
+h4, p {
+  line-height: $header-height !important;
+}
+
+p {
+  text-align: right;
+}
+
+span {
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

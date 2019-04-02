@@ -1,0 +1,16 @@
+@import '../../shared/globals';
+
+:host {
+  display: block;
+  background: $dark-theme-color;
+}
+
+img {
+  max-width: 100%;
+}
+
+#image-container {
+  height: $header-height;
+  padding: 15px;
+  border-bottom: 1px solid $separator-color;
+}

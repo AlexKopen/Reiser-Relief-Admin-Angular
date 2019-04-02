@@ -1,0 +1,15 @@
+@import '../../shared/globals';
+
+#news-wrapper {
+  padding: 25px;
+
+  app-card {
+    height: 400px;
+    overflow: auto;
+    background: $white;
+  }
+
+  td {
+    width: 50%;
+  }
+}

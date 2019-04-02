@@ -8,9 +8,17 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { HeaderComponent } from './header/header.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { AuthService } from '../shared/services/auth.service';
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { CardComponent } from '../shared/card/card.component';
 
 @NgModule({
-  declarations: [DashboardComponent, NewsPostsComponent, HeaderComponent],
+  declarations: [
+    DashboardComponent,
+    NewsPostsComponent,
+    HeaderComponent,
+    SideBarComponent,
+    CardComponent
+  ],
   imports: [
     CommonModule,
     DashboardRoutingModule,

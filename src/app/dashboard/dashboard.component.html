@@ -1,1 +1,10 @@
-<app-header></app-header>
+<div id="dashboard-wrapper" class="h-100">
+  <div class="row h-100 no-gutters">
+    <div class="col-2">
+      <app-side-bar class="h-100"></app-side-bar>
+    </div>
+    <div class="col">
+      <app-news-posts [newsPosts]="newsPosts"></app-news-posts>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,21 @@
-<ul *ngFor="let newsPost of newsPosts">
-  <li>{{ newsPost.title }}</li>
-  <li>{{ newsPost.date | date }}</li>
-  <li [innerHTML]="newsPost.content"></li>
-</ul>
+<app-header></app-header>
+
+<div id="news-wrapper">
+  <app-card>
+    <h2>News Posts</h2>
+    <table class="table table-striped table-bordered">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let newsPost of newsPosts">
+          <td>{{ newsPost.title }}</td>
+          <td>{{ newsPost.date | date }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </app-card>
+</div>
