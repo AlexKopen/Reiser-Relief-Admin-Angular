@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col">
+    <form [formGroup]="addNewsForm" (ngSubmit)="formSubmit()">
+      <div class="row">
+        <div class="col"><p>Title</p></div>
+        <div class="col"><input type="text" formControlName="title" /></div>
+      </div>
+      <div class="row">
+        <div class="col">Post Content</div>
+        <div class="col"><input type="text" formControlName="content" /></div>
+      </div>
+      <button>Add Post</button>
+    </form>
+  </div>
+  <div class="col"></div>
+</div>
