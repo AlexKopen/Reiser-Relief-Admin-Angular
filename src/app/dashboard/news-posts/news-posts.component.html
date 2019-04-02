@@ -1,21 +1,34 @@
 <app-header></app-header>
 
 <div id="news-wrapper">
-  <app-card>
-    <h2>News Posts</h2>
-    <table class="table table-striped table-bordered">
-      <thead class="thead-light">
-        <tr>
-          <th scope="col">Title</th>
-          <th scope="col">Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let newsPost of newsPosts">
-          <td>{{ newsPost.title }}</td>
-          <td>{{ newsPost.date | date }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </app-card>
+  <div class="app-card-wrapper">
+    <app-card>
+      <div class="app-card-content">
+        <h3>Add News Post</h3>
+      </div>
+    </app-card>
+  </div>
+
+  <div class="app-card-wrapper">
+    <app-card>
+      <div class="app-card-content">
+        <h3>News Posts</h3>
+        <table class="table table-striped table-bordered">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let newsPost of newsPostsFiltered">
+              <td>{{ newsPost.title }}</td>
+              <td>{{ newsPost.date | date }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p id="old-toggle" (click)="toggleOld()">{{ postsFooterText }}</p>
+    </app-card>
+  </div>
 </div>

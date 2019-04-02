@@ -3,13 +3,26 @@
 #news-wrapper {
   padding: 25px;
 
-  app-card {
-    height: 400px;
+  .app-card-wrapper {
+    margin-bottom: 25px;
+  }
+
+  .app-card-content {
+    height: 95%;
     overflow: auto;
-    background: $white;
   }
 
   td {
     width: 50%;
+  }
+
+  #old-toggle {
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px !important;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
