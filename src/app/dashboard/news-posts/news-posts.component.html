@@ -5,6 +5,7 @@
     <app-card>
       <div class="app-card-content">
         <h3>Add News Post</h3>
+        <app-news-posts-add></app-news-posts-add>
       </div>
     </app-card>
   </div>
@@ -13,20 +14,9 @@
     <app-card>
       <div class="app-card-content">
         <h3>News Posts</h3>
-        <table class="table table-striped table-bordered">
-          <thead class="thead-light">
-            <tr>
-              <th scope="col">Title</th>
-              <th scope="col">Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let newsPost of newsPostsFiltered">
-              <td>{{ newsPost.title }}</td>
-              <td>{{ newsPost.date | date }}</td>
-            </tr>
-          </tbody>
-        </table>
+        <app-news-posts-list
+          [newsPosts]="newsPostsFiltered"
+        ></app-news-posts-list>
       </div>
       <p id="old-toggle" (click)="toggleOld()">{{ postsFooterText }}</p>
     </app-card>

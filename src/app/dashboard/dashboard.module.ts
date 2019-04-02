@@ -10,6 +10,9 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { AuthService } from '../shared/services/auth.service';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { CardComponent } from '../shared/card/card.component';
+import { NewsPostsListComponent } from './news-posts-list/news-posts-list.component';
+import { NewsPostsAddComponent } from './news-posts-add/news-posts-add.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,13 +20,16 @@ import { CardComponent } from '../shared/card/card.component';
     NewsPostsComponent,
     HeaderComponent,
     SideBarComponent,
-    CardComponent
+    CardComponent,
+    NewsPostsListComponent,
+    NewsPostsAddComponent
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    ReactiveFormsModule
   ],
   providers: [AuthService],
   exports: [DashboardComponent]
